@@ -1,0 +1,27 @@
+#!/bin/bash
+
+export PATH="/opt/homebrew/bin:$PATH"
+export XDG_CONFIG_HOME="~/.config"
+
+STR="+WikiIndex"
+
+while getopts 'j' OPTION; do
+    case "$OPTION" in
+        j)
+            STR="+WikiJournal"
+    esac
+done
+
+osascript - "$STR" <<'END'
+on run argv -- argv is a list of strings
+    tell application "iTerm2"
+        set newWindow to (create window with default profile)
+        tell current session of newWindow
+            write text "cd ~/wiki"
+            write text "nvim . " & quoted form of item 1 of argv 
+        end tell
+    end tell
+end run
+END
+
+exit

@@ -1,0 +1,35 @@
+{
+    "title": "opt + n opens wiki, opt + j opens daily journal",
+    "rules": [
+        {
+            "manipulators": [
+                {
+                    "description": "wiki",
+                    "type": "basic",
+                    "from": {
+                        "key_code": "w",
+                        "modifiers": { "mandatory": [ "right_option" ] } 
+                    },
+                    "to": [
+                        {
+                            "shell_command": "~/.local/bin/vimwiki"
+                        }
+                    ]
+                },
+                {
+                    "description": "journal",
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": { "mandatory": [ "right_option" ] }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "~/.local/bin/vimwiki -j"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
