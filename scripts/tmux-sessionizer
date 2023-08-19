@@ -3,13 +3,13 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/code \
+    selected=$(find ~ \
+                    ~/code \
                     ~/code/photoassist \
                     ~/code/vidvox \
                     ~/code/games/ \
                     ~/code/games/c \
                     ~/code/games/swift:metal \
-                    ~/local \
                     ~/dotfiles \
                     -mindepth 1 -maxdepth 1 -type d | fzf
               )

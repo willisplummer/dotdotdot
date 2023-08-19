@@ -1,5 +1,11 @@
 # DOTFILES
 
+I think you need to install:
+- fzf
+- ripgrep
+- tmux
+- karabiner
+
 Finally putting one of these together
 
 ## scripts
