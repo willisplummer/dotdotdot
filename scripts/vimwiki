@@ -5,6 +5,8 @@ export XDG_CONFIG_HOME="~/.config"
 
 STR="+WikiIndex"
 
+echo "running bash script"
+
 while getopts 'j' OPTION; do
     case "$OPTION" in
         j)

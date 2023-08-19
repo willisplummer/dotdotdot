@@ -12,6 +12,6 @@ Note: you might have to make the dir first - unsure
 # karabiner
 ```
 mkdir ~/.config/karabiner
-ln -s ~/dotfiles/karabiner/* ~/.config/karabiner`
+ln -s ~/dotfiles/karabiner/* ~/.config/karabiner/assets/complex_modifications`
 ```
 
