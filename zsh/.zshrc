@@ -12,7 +12,6 @@ export ZSH="/Users/willisplummer/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-
 bindkey -s ^f "tmux-sessionizer\n"
 
 # Set list of themes to pick from when loading at random
@@ -117,6 +116,8 @@ source $(brew --prefix nvm)/nvm.sh
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
+alias wiki="~/.local/bin/vimwiki"
+alias journal="~/.local/bin/vimwiki -j"
 # eval "$(rbenv init -)"
 # eval "$(direnv hook zsh)"
 
