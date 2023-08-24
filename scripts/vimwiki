@@ -21,10 +21,6 @@ on run argv -- argv is a list of strings
         set newWindow to (create window with default profile)
         tell current session of newWindow
             write text "tmux-sessionizer ~/wiki"
-            # ideally only do this if vim isn't already open
-            # i guess i could kill the existing tmux session wiki first
-            # Tried this and it didnt' really work
-            # write text "tmux-windowizer wiki-hotkey 'vim .'" & quoted form of item 1
             write text "tmux send -t wiki 'vim . " & quoted form of item 1 of argv & "' ENTER"
         end tell
     end tell

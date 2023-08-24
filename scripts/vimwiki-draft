@@ -1,0 +1,38 @@
+#!/bin/bash
+
+export PATH="/opt/homebrew/bin:$PATH"
+export XDG_CONFIG_HOME="~/.config"
+
+STR="+WikiIndex"
+
+while getopts 'j' OPTION; do
+    case "$OPTION" in
+        j)
+            STR="+WikiJournal"
+    esac
+done
+
+open /Applications/iTerm.app
+
+osascript - "$STR" <<'END'
+on run argv -- argv is a list of strings
+    tell application "iTerm2"
+        activate
+        # really we want to connect to the current window except in the case of using the karabiner shortcut while there's already an open iterm window
+        # in that case, we do want to create a new window to avoid 'hijacking' the user's current session
+        set newWindow to (create window with default profile)
+        tell current session of newWindow
+            write text "tmux-sessionizer ~/wiki"
+            write text "tmux send -t wiki '
+        end tell
+            # ideally only do this if vim isn't already open
+            # i guess i could kill the existing tmux session wiki first
+            # Tried this and it didnt' really work
+            # write text "tmux-windowizer wiki-hotkey 'vim .'" & quoted form of item 1
+            # write text "tmux send -t wiki 'vim . " & quoted form of item 1 of argv & "' ENTER"
+        # end tell
+    end tell
+end run
+END
+
+exit

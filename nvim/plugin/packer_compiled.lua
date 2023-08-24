@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/mini.hues",
     url = "https://github.com/echasnovski/mini.hues"
   },
-  ["mini.pairs"] = {
-    loaded = true,
-    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/mini.pairs",
-    url = "https://github.com/echasnovski/mini.pairs"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -145,10 +140,20 @@ _G.packer_plugins = {
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["pastify.nvim"] = {
+    loaded = true,
+    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/pastify.nvim",
+    url = "https://github.com/TobinPalmer/pastify.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,

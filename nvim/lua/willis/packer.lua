@@ -66,7 +66,11 @@ return require('packer').startup(function(use)
 
     use('christoomey/vim-tmux-navigator')
 
-    use 'echasnovski/mini.pairs'
+    -- used to let mini.comment know how to comment out jsx for example
+    use('JoosepAlviste/nvim-ts-context-commentstring')
+    -- use 'echasnovski/mini.pairs'
     use 'echasnovski/mini.comment'
     use 'echasnovski/mini.hues'
+
+    use 'TobinPalmer/pastify.nvim'
 end)
