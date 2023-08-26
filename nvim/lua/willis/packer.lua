@@ -73,4 +73,5 @@ return require('packer').startup(function(use)
     use 'echasnovski/mini.hues'
 
     use 'TobinPalmer/pastify.nvim'
+    use 'nmac427/guess-indent.nvim'
 end)

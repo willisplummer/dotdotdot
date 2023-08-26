@@ -118,6 +118,12 @@ alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.
 
 alias wiki="~/.local/bin/vimwiki"
 alias journal="~/.local/bin/vimwiki -j"
+
+alias vim="nvim"
+alias vi="nvim"
+
+alias cat="bat"
+
 # eval "$(rbenv init -)"
 # eval "$(direnv hook zsh)"
 
@@ -143,8 +149,6 @@ load-nvmrc() {
     nvm use default
   fi
 }
-alias vim="nvim"
-alias vi="nvim"
 
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc

@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["guess-indent.nvim"] = {
+    loaded = true,
+    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
+    url = "https://github.com/nmac427/guess-indent.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/harpoon",

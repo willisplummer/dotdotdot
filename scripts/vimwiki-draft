@@ -17,20 +17,16 @@ open /Applications/iTerm.app
 osascript - "$STR" <<'END'
 on run argv -- argv is a list of strings
     tell application "iTerm2"
+        # start iterm if it's not already running - is there a way to do this without creating a window?
         activate
-        # really we want to connect to the current window except in the case of using the karabiner shortcut while there's already an open iterm window
-        # in that case, we do want to create a new window to avoid 'hijacking' the user's current session
-        set newWindow to (create window with default profile)
-        tell current session of newWindow
-            write text "tmux-sessionizer ~/wiki"
-            write text "tmux send -t wiki '
+        # TODO - only create a new window if called with -karabiner flag
+        set activeWindow to (create window with default profile)
+        # TODO - otherwise, set activeWindow to the window call was made from
+        tell current session of activeWindow
+            # here we want to find and connect to the session if it exists
+            # if not we create it 
+            # then we create a new tmux window, run vim . in it with our relevant wiki flag from above 
         end tell
-            # ideally only do this if vim isn't already open
-            # i guess i could kill the existing tmux session wiki first
-            # Tried this and it didnt' really work
-            # write text "tmux-windowizer wiki-hotkey 'vim .'" & quoted form of item 1
-            # write text "tmux send -t wiki 'vim . " & quoted form of item 1 of argv & "' ENTER"
-        # end tell
     end tell
 end run
 END
