@@ -20,7 +20,14 @@ rust_tools.setup({
   server = {
     on_attach = function(_, bufnr)
       vim.keymap.set('n', '<leader>ca', rust_tools.hover_actions.hover_actions, {buffer = bufnr})
-    end
+    end,
+    settings = {
+      ["rust-analyzer"] = {
+        checkOnSave = {
+          command = "clippy"
+        }
+      }
+    }
   }
 })
 
