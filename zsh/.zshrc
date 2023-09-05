@@ -155,3 +155,10 @@ load-nvmrc
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 
 export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+
+# bun completions
+[ -s "/Users/willisplummer/.bun/_bun" ] && source "/Users/willisplummer/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
