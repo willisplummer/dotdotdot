@@ -31,6 +31,18 @@ rust_tools.setup({
   }
 })
 
+-- lsp.format_on_save({
+--   format_opts = {
+--     async = false,
+--     timeout_ms = 10000,
+--   },
+--   servers = {
+--     ['tsserver'] = {'javascript', 'typescript'},
+--     ['rust_analyzer'] = {'rust'},
+--   }
+-- })
+--
+
 cmp.setup({
   mapping = {
     ['<TAB>'] = cmp.mapping.confirm({ select = true }),

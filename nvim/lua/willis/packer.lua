@@ -75,4 +75,6 @@ return require('packer').startup(function(use)
 
     use 'TobinPalmer/pastify.nvim'
     use 'nmac427/guess-indent.nvim'
+
+    use 'stevearc/conform.nvim'
 end)
