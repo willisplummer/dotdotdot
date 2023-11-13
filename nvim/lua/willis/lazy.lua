@@ -1,5 +1,25 @@
 return require('lazy').setup({
     {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        },
+        config = function()
+            require("neo-tree").setup({
+                filesystem = {
+                    hijack_netrw_behavior = "open_current",
+                    follow_current_file = {
+                        enabled = true
+                    },
+                }
+            })
+        end
+    },
+    {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
         -- or                            , branch = '0.1.x',
@@ -18,6 +38,7 @@ return require('lazy').setup({
     },
 
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+
     --  'nvim-treesitter/playground',
     'ThePrimeagen/harpoon',
     'mbbill/undotree',

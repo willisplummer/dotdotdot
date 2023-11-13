@@ -21,7 +21,7 @@ mkdir ~/.config/nvim
 ln -s ~/dotfiles/nvim/* ~/.config/nvim
 ```
 
-## tmux 
+## tmux
 ```
 mkdir ~/.config/tmux
 ln -s ~/dotfiles/tmux/* ~/.config/tmux

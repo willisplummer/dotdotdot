@@ -1,7 +1,9 @@
 vim.g.mapleader = " "
--- easier exit to file tree
--- 'project view'
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- easier exit to file tree -- 'project view'
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', '<Cmd>Neotree position=current toggle<CR>')
+vim.keymap.set('n', '<C-t>', '<Cmd>Neotree toggle<CR>')
 
 vim.keymap.set('', '<leader>y', '"*y', { desc = 'yank to clipboard' })
 vim.keymap.set('', '<leader>Y', '"*Y', { desc = 'yank until EOL to clipboard' })
@@ -52,6 +54,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- not sure what this did but definitely wasnt using it because its mapped to theprimeagen lol
 -- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+-- vim.keymap.set("n", "<leader><leader>", function()
+--     vim.cmd("so")
+-- end)
