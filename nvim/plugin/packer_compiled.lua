@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/mini.comment",
     url = "https://github.com/echasnovski/mini.comment"
   },
-  ["mini.hues"] = {
-    loaded = true,
-    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/mini.hues",
-    url = "https://github.com/echasnovski/mini.hues"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -155,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -179,6 +179,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/willisplummer/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   undotree = {
     loaded = true,

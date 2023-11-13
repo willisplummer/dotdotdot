@@ -13,6 +13,16 @@ lsp.skip_server_setup({ 'rust_analyzer' })
 
 lsp.setup()
 
+-- referencing nvim-web-devicons
+lsp.set_sign_icons({
+  error = "",
+  warn = "",
+  hint = "",
+  info = "",
+  other = "",
+})
+
+
 local cmp = require('cmp')
 local rust_tools = require('rust-tools')
 

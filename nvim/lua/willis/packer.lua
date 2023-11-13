@@ -42,14 +42,14 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },           -- Required
-            { 'williamboman/mason.nvim' },         -- Optional
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },   -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },   -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
 
@@ -71,7 +71,15 @@ return require('packer').startup(function(use)
     use('JoosepAlviste/nvim-ts-context-commentstring')
     -- use 'echasnovski/mini.pairs'
     use 'echasnovski/mini.comment'
-    use 'echasnovski/mini.hues'
+
+    -- Error Reporting
+    use {
+        'folke/trouble.nvim',
+        requires = { { 'nvim-tree/nvim-web-devicons' } }
+    }
+    -- ColorScheme
+    use 'folke/tokyonight.nvim'
+    -- use 'echasnovski/mini.hues'
 
     use 'TobinPalmer/pastify.nvim'
     use 'nmac427/guess-indent.nvim'

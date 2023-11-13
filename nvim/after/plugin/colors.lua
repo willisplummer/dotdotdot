@@ -1,10 +1,4 @@
-function ColorMyPencils(color)
-    -- color = "rose-pine"
---	color = color or "rose-pine"
-    -- vim.cmd.colorscheme(color)
+-- require('mini.hues').setup({ background = '#002734', foreground = '#c0c8cc', accent = 'blue' })
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
-ColorMyPencils()
+-- options are tokyonight-storm, tokyonight-moon, tokyonight-night, tokyonight-day
+vim.cmd [[colorscheme tokyonight-night]]
