@@ -1,5 +1,10 @@
 return require('lazy').setup({
     {
+        'renerocksai/telekasten.nvim',
+        dependencies = { 'nvim-telescope/telescope.nvim' }
+    },
+
+    {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
         dependencies = {
@@ -11,6 +16,11 @@ return require('lazy').setup({
         config = function()
             require("neo-tree").setup({
                 filesystem = {
+                    filtered_items = {
+                        visible = true,
+                        hide_dotfiles = false,
+                        hide_gitignored = true,
+                    },
                     hijack_netrw_behavior = "open_current",
                     follow_current_file = {
                         enabled = true
@@ -22,10 +32,15 @@ return require('lazy').setup({
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
-        -- or                            , branch = '0.1.x',
-        dependencies = { { 'nvim-lua/plenary.nvim' } }
+        dependencies = { 'nvim-lua/plenary.nvim' }
     },
-
+    {
+        'nvim-telescope/telescope-media-files.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim', 'nvim-telescope/telescope.nvim' },
+        -- config = function()
+        --     require("telescope").load_extension("media_files")
+        -- end
+    },
     {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
