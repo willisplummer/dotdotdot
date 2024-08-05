@@ -46,13 +46,8 @@ alias gc='git commit --verbose'
 alias gl='git pull'
 alias gp='git push'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
-is-at-least 2.30 "$git_version" \
-  && alias gpsupf='git push --set-upstream origin $(git_current_branch) --force-with-lease --force-if-includes' \
-  || alias gpsupf='git push --set-upstream origin $(git_current_branch) --force-with-lease'
 alias gst='git status'
-is-at-least 2.13 "$git_version" \
-  && alias gsta='git stash push' \
-  || alias gsta='git stash save'
+alias gsta='git stash push'
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
