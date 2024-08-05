@@ -1,8 +1,24 @@
 return require('lazy').setup({
     {
-        'renerocksai/telekasten.nvim',
-        dependencies = { 'nvim-telescope/telescope.nvim' }
+        "epwalsh/obsidian.nvim",
+        version = "*",
+        lazy = true,
+        ft = "markdown",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "hrsh7th/nvim-cmp",
+
+        },
+        opts = {
+            workspaces = {
+                {
+                    name = "personal",
+                    path = "~/obsidian-vault",
+                },
+            },
+        },
     },
+
 
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -76,8 +92,7 @@ return require('lazy').setup({
         }
     },
 
-    -- use('vimwiki/vimwiki')
-    'lervag/wiki.vim',
+
 
     {
         "iamcco/markdown-preview.nvim",
