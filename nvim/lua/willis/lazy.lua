@@ -10,32 +10,6 @@ return require('lazy').setup({
 
         }
     },
-
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        },
-        config = function()
-            require("neo-tree").setup({
-                filesystem = {
-                    filtered_items = {
-                        visible = true,
-                        hide_dotfiles = false,
-                        hide_gitignored = true,
-                    },
-                    hijack_netrw_behavior = "open_current",
-                    follow_current_file = {
-                        enabled = true
-                    },
-                }
-            })
-        end
-    },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
@@ -47,6 +21,13 @@ return require('lazy').setup({
         -- config = function()
         --     require("telescope").load_extension("media_files")
         -- end
+    },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        -- dependencies = { { "echasnovski/mini.icons", opts = {} } },
+        dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
     },
     {
         "kylechui/nvim-surround",
