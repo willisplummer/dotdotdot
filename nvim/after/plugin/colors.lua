@@ -1,4 +1,16 @@
--- require('mini.hues').setup({ background = '#002734', foreground = '#c0c8cc', accent = 'blue' })
+require("tokyonight").setup({
+  -- use the night style
+  style = "storm",
+
+  transparent = true,
+
+  -- disable italic for functions
+  styles = {
+    functions = {},
+    -- sidebars = "transparent",
+    -- floats = "dark"
+  },
+})
 
 -- options are tokyonight-storm, tokyonight-moon, tokyonight-night, tokyonight-day
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme tokyonight]]
