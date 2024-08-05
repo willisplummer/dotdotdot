@@ -8,17 +8,8 @@ return require('lazy').setup({
             "nvim-lua/plenary.nvim",
             "hrsh7th/nvim-cmp",
 
-        },
-        opts = {
-            workspaces = {
-                {
-                    name = "personal",
-                    path = "~/obsidian-vault",
-                },
-            },
-        },
+        }
     },
-
 
     {
         "nvim-neo-tree/neo-tree.nvim",
