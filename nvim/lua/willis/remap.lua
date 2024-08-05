@@ -1,10 +1,6 @@
 vim.g.mapleader = " "
 
 -- easier exit to file tree -- 'project view'
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- vim.keymap.set('n', '<leader>pv', '<Cmd>Neotree position=current toggle<CR>')
--- vim.keymap.set('n', '<C-t>', '<Cmd>Neotree toggle<CR>')
-
 vim.keymap.set("n", "<leader>pv", '<Cmd>Oil<CR>')
 
 vim.keymap.set('', '<leader>y', '"*y', { desc = 'yank to clipboard' })
