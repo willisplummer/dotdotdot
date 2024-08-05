@@ -9,7 +9,7 @@ require("obsidian").setup({
   disable_frontmatter = true,
 
   mappings = {
-    ["<leader>zd"] = {
+    ["<leader>zt"] = {
       action = function()
         return require('obsidian').util.toggle_checkbox()
       end,
