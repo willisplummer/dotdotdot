@@ -116,8 +116,7 @@ source $(brew --prefix nvm)/nvm.sh
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
-alias wiki="~/.local/bin/vimwiki"
-alias journal="~/.local/bin/vimwiki -j"
+alias oo = "~/.local/bin/obsidian"
 
 alias vim="nvim"
 alias vi="nvim"

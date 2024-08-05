@@ -7,6 +7,14 @@ require("obsidian").setup({
   },
 
   disable_frontmatter = true,
+  ---@param spec { id: string, dir: obsidian.Path, title: string|? }
+  ---@return string|obsidian.Path The full path to the new note.
+  note_path_func = function(spec)
+    -- This is equivalent to the default behavior.
+    local path = spec.dir / tostring(spec.title or spec.id)
+    return path:with_suffix(".md")
+  end,
+
 
   mappings = {
     ["<leader>zt"] = {
@@ -14,7 +22,7 @@ require("obsidian").setup({
         return require('obsidian').util.toggle_checkbox()
       end,
       opts = { buffer = true },
-    }
+    },
   },
   ui = {
     checkboxes = {
@@ -30,3 +38,5 @@ require("obsidian").setup({
     folder = "Templates"
   }
 })
+
+vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<cr>")

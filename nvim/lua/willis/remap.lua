@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 -- easier exit to file tree -- 'project view'
 vim.keymap.set("n", "<leader>pv", '<Cmd>Oil<CR>')
 
+-- copy and paste
 vim.keymap.set('', '<leader>y', '"*y', { desc = 'yank to clipboard' })
 vim.keymap.set('', '<leader>Y', '"*Y', { desc = 'yank until EOL to clipboard' })
 
