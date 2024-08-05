@@ -162,3 +162,5 @@ export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme

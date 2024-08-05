@@ -1,32 +1,39 @@
 # DOTFILES
 
-I think you need to install:
+# SETUP
+
+I think you need to install the following (with brew ideally):
 - fzf
 - ripgrep
 - tmux
+- neovim
 - karabiner
-
-Finally putting one of these together
+- wezterm
+- font-meslo-lg-nerd-font
 
 ## scripts
-Note: you might have to make the dir first - unsure
+Note: you might have to make the bin dir first - unsure
+
 `ln -s ~/dotfiles/scripts/* ~/.local/bin`
 
 ## zsh
+
 `ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc`
+
+## wezterm
+
+`ln -s ~/dotfiles/wezterm/.wezterm.config ~/.wezterm.config`
 
 ## nvim
 ```
 mkdir ~/.config/nvim
 ln -s ~/dotfiles/nvim/* ~/.config/nvim
 ```
-
 ## tmux
 ```
 mkdir ~/.config/tmux
 ln -s ~/dotfiles/tmux/* ~/.config/tmux
 ```
-
 ## karabiner
 ```
 mkdir ~/.config/karabiner
