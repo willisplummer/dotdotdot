@@ -4,6 +4,8 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+config.quit_when_all_windows_are_closed = false
+
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 16
 
