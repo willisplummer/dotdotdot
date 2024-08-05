@@ -40,3 +40,5 @@ require("obsidian").setup({
 })
 
 vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<cr>")
+vim.keymap.set("n", "<leader>on", ":ObsidianNew<cr>")
+vim.keymap.set("n", "<leader>ont", ":ObsidianNewFromTemplate<cr>")
