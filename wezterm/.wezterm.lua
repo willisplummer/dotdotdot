@@ -16,6 +16,9 @@ config.color_scheme = "Tokyo Night"
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 10
 
+config.initial_rows = 36
+config.initial_cols = 120
+
 config.keys = {
   { mods = "OPT", key = "LeftArrow",  action = wezterm.action.SendKey({ mods = "ALT", key = "b" }) },
   { mods = "OPT", key = "RightArrow", action = wezterm.action.SendKey({ mods = "ALT", key = "f" }) },
