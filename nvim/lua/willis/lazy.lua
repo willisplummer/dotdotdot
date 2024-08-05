@@ -100,9 +100,19 @@ return require('lazy').setup({
 
     'christoomey/vim-tmux-navigator',
 
-    -- used to let mini.comment know how to comment out jsx for example
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    'echasnovski/mini.comment',
+    {
+        "echasnovski/mini.comment",
+        event = "VeryLazy",
+        dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
+        opts = {
+            options = {
+                custom_commentstring = function()
+                    return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo
+                        .commentstring
+                end,
+            },
+        },
+    },
 
     -- Error Reporting
     {

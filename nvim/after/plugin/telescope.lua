@@ -46,7 +46,6 @@ telescope.setup({
 	},
 	pickers = {
 		find_files = {
-			-- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 		},
 	},
@@ -54,7 +53,9 @@ telescope.setup({
 
 
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") });
-end)
+vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
+-- NOTE: lets see if i use this ever
+vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
+-- vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
+-- NOTE: I dont actually use this so commenting it out for now
+-- vim.keymap.set('n', '<C-p>', builtin.git_files, {})
