@@ -41,6 +41,7 @@ alias cat="bat"
 alias g='git'
 alias ga='git add'
 alias gb='git branch'
+alias gcl = 'git clone'
 alias gco='git checkout'
 alias gc='git commit --verbose'
 alias gl='git pull'
