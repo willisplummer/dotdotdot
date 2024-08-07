@@ -31,14 +31,20 @@ require("obsidian").setup({
     }
   },
 
-  notes_subdir = "Inbox",
+  notes_subdir = "00 Inbox",
   new_notes_location = "notes_subdir",
 
   templates = {
-    folder = "Templates"
+    folder = "03 Templates"
+  },
+
+  daily_notes = {
+    folder = "01 Journal",
+    template = "Default.md"
   }
 })
 
 vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<cr>")
 vim.keymap.set("n", "<leader>on", ":ObsidianNew<cr>")
 vim.keymap.set("n", "<leader>ont", ":ObsidianNewFromTemplate<cr>")
+vim.keymap.set("n", "<leader>ot", ":ObsidianToday<cr>")
