@@ -10,6 +10,7 @@ config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 16
 
 config.enable_tab_bar = false
+config.bypass_mouse_reporting_modifiers = 'CMD'
 
 config.window_decorations = "RESIZE"
 
