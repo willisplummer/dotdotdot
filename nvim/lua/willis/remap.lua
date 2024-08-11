@@ -10,7 +10,7 @@ vim.keymap.set('', '<leader>Y', '"*Y', { desc = 'yank until EOL to clipboard' })
 vim.keymap.set('n', '<leader>p', '"*p', { desc = 'paste after cursor from clipboard' })
 vim.keymap.set('n', '<leader>P', '"*P', { desc = 'paste before cursor from clipboard' })
 
--- jump highighted text up and down
+-- jump highighted text (visual mode) up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -50,9 +50,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- not sure what this did but definitely wasnt using it because its mapped to theprimeagen lol
--- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-
+-- reload vimrc file
 -- vim.keymap.set("n", "<leader><leader>", function()
 --     vim.cmd("so")
 -- end)
