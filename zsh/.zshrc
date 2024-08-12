@@ -59,6 +59,13 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
+# completions
+fpath+="/opt/homebrew/share/zsh/site-functions"
+
+autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+
 # ---
 # keybindings
 bindkey -s ^f "tmux-sessionizer\n"
