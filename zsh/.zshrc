@@ -14,10 +14,11 @@ export PATH=$PATH:$HOME/.local/bin
 export ZSH="/Users/willisplummer/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=( git zsh-syntax-highlighting zsh-autosuggestions nvm)
+source "$ZSH/oh-my-zsh.sh"
 
 bindkey -s ^f "tmux-sessionizer\n"
 
-plugins=( git zsh-syntax-highlighting zsh-autosuggestions nvm)
 
 # User configuration
 
@@ -53,6 +54,4 @@ bindkey '^[[B' history-search-forward
 
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_LOAD=true
-
-
 
