@@ -74,15 +74,14 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # fnm
-FNM_PATH="/Users/willisplummer/Library/Application Support/fnm"
+FNM_PATH="/home/wmp224/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/willisplummer/Library/Application Support/fnm:$PATH"
+  export PATH="/home/wmp224/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
