@@ -45,7 +45,7 @@ alias gl='git pull'
 alias gp='git push'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
 alias gst='git status'
-alias gsta='git stash push'
+alias gsta='git stash'
 
 #---
 
