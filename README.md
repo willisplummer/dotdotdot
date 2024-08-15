@@ -39,4 +39,7 @@ ln -s ~/dotfiles/tmux/* ~/.config/tmux
 mkdir ~/.config/karabiner
 ln -s ~/dotfiles/karabiner/* ~/.config/karabiner/assets/complex_modifications`
 ```
+## Kanata
 
+Pretty elaborate setup - see the github.
+For debugging any weirdness, test your raw input with their simulator https://jtroo.github.io/
