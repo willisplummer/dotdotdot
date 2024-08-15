@@ -36,6 +36,7 @@ alias nvm="fnm"
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 alias g='git'
 alias ga='git add'
+alias gd='git diff'
 alias gb='git branch'
 alias gcl='git clone'
 alias gco='git checkout'
