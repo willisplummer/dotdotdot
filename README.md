@@ -36,12 +36,16 @@ ln -s ~/dotfiles/tmux/tmux.conf ~/.config/tmux/tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-## karabiner
+## caps as ctrl-esc
+### karabiner (for mac)
 ```
 mkdir ~/.config/karabiner
 ln -s ~/dotfiles/karabiner/* ~/.config/karabiner/assets/complex_modifications/`
 ```
-## Kanata
+### caps2esc (linux)
+Not sure that this works as well as I want it to - could be issues with my keyboard or just needing to tweak the timing
 
-Pretty elaborate setup - see the github.
-For debugging any weirdness, test your raw input with their simulator https://jtroo.github.io/
+basically I downloaded and built it and then edited /etc/udevmon.yaml
+
+
+https://gitlab.com/interception/linux/plugins/caps2esc

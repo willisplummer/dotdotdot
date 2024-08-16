@@ -5,10 +5,10 @@ require("conform").setup({
     -- Conform will run multiple formatters sequentially
     -- python = { "isort", "black" },
     -- Use a sub-list to run only the first available formatter
-    javascript = { { "prettierd", "prettier" } },
-    typescript = { { "prettierd", "prettier" } },
-    javascriptreact = { { "prettierd", "prettier" } },
-    typescriptreact = { { "prettierd", "prettier" } },
+    javascript = { "prettierd", "prettier", stop_after_first = true },
+    typescript = { "prettierd", "prettier", stop_after_first = true },
+    javascriptreact = { "prettierd", "prettier", stop_after_first=true },
+    typescriptreact = { "prettierd", "prettier", stop_after_first=true } ,
     -- Use the "*" filetype to run formatters on all filetypes.
     -- ["*"] = { "codespell" },
     -- Use the "_" filetype to run formatters on filetypes that don't
