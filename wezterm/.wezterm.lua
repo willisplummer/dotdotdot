@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.quit_when_all_windows_are_closed = false
 
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 16
+config.font_size = 14
 
 config.enable_tab_bar = false
 config.bypass_mouse_reporting_modifiers = 'CMD'
