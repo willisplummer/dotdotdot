@@ -14,7 +14,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.stack/programs/
 export PATH=$PATH:$HOME/.local/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="${HOME}/.pyenv/shims:${PATH}"
+export PATH="$HOME/.pyenv/shims:$PATH"
 
 # Aliases
 
@@ -77,13 +77,14 @@ bindkey '^[[B' history-search-forward
 # fnm
 FNM_PATH="/home/wmp224/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/wmp224/.local/share/fnm:$PATH"
+  export PATH="/Users/willisplummer/Library/Application Support/fnm:$PATH"
   eval "`fnm env`"
 fi
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+// TODO: make this OS agnostic -- on linux its /usr/share/ and on mac its /opt/homebrew/share
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
