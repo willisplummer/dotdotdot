@@ -13,8 +13,8 @@ fi
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.stack/programs/
 export PATH=$PATH:$HOME/.local/bin
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="${HOME}/.pyenv/shims:${PATH}"
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
+export PATH=$HOME/.pyenv/shims:$PATH
 
 # Aliases
 
