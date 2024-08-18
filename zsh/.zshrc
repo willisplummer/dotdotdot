@@ -82,7 +82,7 @@ if [ -d "$FNM_PATH" ]; then
 fi
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-// TODO: make this OS agnostic -- on linux its /usr/share/ and on mac its /opt/homebrew/share
+# TODO: make this OS agnostic -- on linux its /usr/share/ and on mac its /opt/homebrew/share
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
