@@ -11,6 +11,15 @@ I think you need to install the following (with brew ideally):
 - wezterm
 - font-meslo-lg-nerd-font
 
+## Git
+```
+git config --global user.name "Willis Plummer"
+git config --global user.email "willisplummer@gmail.com"
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+
 ## scripts
 Note: you might have to make the bin dir first - unsure
 
@@ -49,3 +58,4 @@ basically I downloaded and built it and then edited /etc/udevmon.yaml
 
 
 https://gitlab.com/interception/linux/plugins/caps2esc
+
