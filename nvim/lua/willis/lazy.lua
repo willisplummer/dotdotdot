@@ -95,11 +95,20 @@ return require('lazy').setup({
         },
     },
 
-    -- Error Reporting
-    {
-        'folke/trouble.nvim',
-        dependencies = { { 'nvim-tree/nvim-web-devicons' } }
-    },
+    -- -- Error Reporting
+    -- {
+    --     'folke/trouble.nvim',
+    --     opts = {},
+    --     cmd = "Trouble",
+    --     keys = {
+    --         {
+    --             "<leader>tt",
+    --             "<cmd>Trouble diagnostics toggle<cr>",
+    --             desc = "Diagnostics (Trouble)"
+    --         }
+    --     }
+    -- },
+
     -- ColorScheme
     'folke/tokyonight.nvim',
 

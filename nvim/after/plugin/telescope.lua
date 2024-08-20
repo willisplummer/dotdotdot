@@ -56,6 +56,8 @@ vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
 -- NOTE: lets see if i use this ever
 vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
+-- projectwide diagnostics
+vim.keymap.set('n', '<leader>pd', function() require('telescope.builtin').diagnostics({ severity_bound = 0 }) end, {})
 -- vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
 -- NOTE: I dont actually use this so commenting it out for now
 -- vim.keymap.set('n', '<C-p>', builtin.git_files, {})
